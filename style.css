@@ -419,3 +419,131 @@ body{
     background: #c40094;
     color: #fff;
 }
+
+/* For tablets and larger phones */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 60px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .home-content .start-btn {
+        width: 150px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .quiz-box {
+        width: 90%;
+    }
+
+    .quiz-footer .next-btn {
+        width: 80px;
+        height: 40px;
+        margin-left: 20px;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .header {
+        padding: 20px 2%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .home-content h1 {
+        font-size: 45px;
+    }
+
+    .home-content p {
+        font-size: 12px;
+    }
+
+    .home-content .start-btn {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .quiz-box {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .quiz-footer .next-btn {
+        width: 70px;
+        height: 35px;
+        margin-left: 10px;
+    }
+}
+
+/* For small mobile phones */
+@media (max-width: 320px) {
+    .header {
+        padding: 10px 1%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .home-content h1 {
+        font-size: 35px;
+    }
+
+    .home-content p {
+        font-size: 10px;
+    }
+
+    .home-content .start-btn {
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .quiz-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .quiz-footer .next-btn {
+        width: 60px;
+        height: 30px;
+        margin-left: 5px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
