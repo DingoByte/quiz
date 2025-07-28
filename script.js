@@ -144,26 +144,28 @@ function headerScore(){
 }
 
 
-function showResultBox(){
+function showResultBox() {
     quizBox.classList.remove('active');
     resultBox.classList.add('active');
+
     const scoreText = document.querySelector('.score-text');
     scoreText.textContent = `Your Score ${userScore} out of ${questions.length}`;
 
     const circularProgress = document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');
-    let progressStartValue = -1;
-    let progressEndValue = (userScore / questions.length)*100;
+
+    let progressStartValue = 0;
+    let progressEndValue = Math.round((userScore / questions.length) * 100); // Fix: round to integer
     let speed = 20;
 
-    let progress = setInterval(()=> {
-        progressStartValue++;
-        // console.log(progressEndValue);
-        circularProgress.style.background = `conic-gradient(#c40094 ${progressStartValue*3.6}deg, rgba(255,255,255,.1) 0deg)`;
+    let progress = setInterval(() => {
+        circularProgress.style.background = `conic-gradient(#c40094 ${progressStartValue * 3.6}deg, rgba(255,255,255,.1) 0deg)`;
         progressValue.textContent = `${progressStartValue}%`;
-        if(progressStartValue == progressEndValue){
-            clearInterval(progress);
-        }
 
+        if (progressStartValue >= progressEndValue) {
+            clearInterval(progress);
+        } else {
+            progressStartValue++;
+        }
     }, speed);
 }
